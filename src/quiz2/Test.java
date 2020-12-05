@@ -1,17 +1,18 @@
-package quiz;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package quiz2;
 import java.util.Scanner;
 /**
  *
  * @author Kenneth Cedeno
  */
-public class Quiz {
-
-    /**
-     * @param args the command line arguments
-     */
+public class Test {
     public static void main(String[] args) {
         
-        Notas sistema = new Notas();
+        Nota sistema = new Nota();
         Scanner berenjena = new Scanner(System.in);
         int paraQueSeRepita = 0;
         
@@ -24,8 +25,10 @@ public class Quiz {
             int deRes = berenjena.nextInt();
             System.out.println("Ingrese el nombre del padre: ");
             String superf = berenjena.next();
+            System.out.println("Ingrese el nombre de la madre: ");
+            String suuperf = berenjena.next();
             
-            Estudiante naiskirobiliat = new Estudiante(deRes, nombre, superf);
+            Estudiantes naiskirobiliat = new Estudiantes(deRes, nombre, superf, suuperf);
             
             System.out.println("Inserte la nota obtenida: ");
             int nota = berenjena.nextInt();
@@ -34,12 +37,12 @@ public class Quiz {
             System.out.println("Inserte puntos obtenidos: ");
             int puntosObtenidos = berenjena.nextInt();
             
-            Examenes f = new Examenes(naiskirobiliat,totalDePuntos,puntosObtenidos,nota);
+            Examen f = new Examen(naiskirobiliat,totalDePuntos,puntosObtenidos,nota);
             
             sistema.agregarEx(f);
             
             sistema.mostrarExamen();
+            
         }
     }
-    
 }
