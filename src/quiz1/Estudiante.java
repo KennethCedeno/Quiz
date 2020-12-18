@@ -24,7 +24,7 @@ public class Estudiante {
     }
 
     public void mostrarDatos() {
-        System.out.println(nombre + " " + carne);
+        System.out.println(nombre + " " + carne + "\nNombre Padre: " + nombrePadre);
     }
 
     //gets y sets

@@ -27,7 +27,7 @@ public class Test {
         System.out.println("Inserte el numero de ingredientes que desea en su pizza: ");
         n = papaya.nextInt();
         
-        int ingredientes[] = new int[n];
+        int[] ingredientes = new int[n];
        
         System.out.println("Codigos: \n Queso=16 \n Jamon=17 \n Salame=18 \n Hongos=19");
         
