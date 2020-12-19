@@ -17,9 +17,7 @@ public class EquipoSonido {
         static int volParlanteIzq = 0;
         static int volParlanteSubWoofer = 0;
         
-        String[] listaAudios = new String[1000]; 
         
-
     public static boolean isParlanteDerecho() {
         return parlanteDerecho;
     }
@@ -67,6 +65,7 @@ public class EquipoSonido {
     public static void setVolParlanteSubWoofer(int volParlanteSubWoofer) {
         EquipoSonido.volParlanteSubWoofer = volParlanteSubWoofer;
     }
+
 
         
     
