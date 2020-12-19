@@ -11,6 +11,7 @@ package ExamenFinal;
  */
 public class Tester {
     public static void main(String[] args){
-        
+        Menu hola = new Menu();
+        hola.iniciar();
     }
 }
