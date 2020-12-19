@@ -14,6 +14,7 @@ public class Menu {
     
     
     public void iniciar() {
+        int n = 0;
         int repetir = 0;
         Scanner u = new Scanner(System.in);
         int opcion;
@@ -90,7 +91,7 @@ public class Menu {
                 } else if (opcion2==10) {
                  
                 } else {
-                System.out.println("Opcion invalida");
+                System.out.println("Opcion invalida.");
                 }
             //fin de opciones de parlantes
             //inicio de opciones de reproduccion
@@ -127,7 +128,7 @@ public class Menu {
                     }
                 } else if (opcion2 == 2){
                     System.out.println("Reproduciendo: ");
-                    for(int i=((int)Math.random()*1000)+1;i<1000;i++){ 
+                    for(int i=((int)Math.random()*999)+1;i<1000;i++){ 
                         if(listaAudios[i].equals("")==false){ 
                         System.out.println(listaAudios[i]); 
                         }
@@ -153,8 +154,44 @@ public class Menu {
                         }
                     }
                 } else if (opcion2 == 4){
+                    System.out.println("Inserte la posicion donde quiere ingresar el codigo binario del audio: ");
+                    n = u.nextInt();
+                    if (listaAudios[n].equals("")){
+                        System.out.println("Inserte el codigo binario del nuevo audio");
+                        listaAudios[n] = u.next();
+                    } else {
+                        System.out.println("Esa posicion ya esta ocupada.");
+                    }
                         
-                        
+                } else if (opcion2 == 5){
+                    System.out.println("Inserte la posicion del audio que desea eliminar: ");
+                    n = u.nextInt();
+                    if (listaAudios[n].equals("")){
+                        System.out.println("Esa posicion ya esta vacia.");
+                    } else {
+                        listaAudios[n] = "";
+                        System.out.println("Audio eliminado.");
+                    }
+                } else if (opcion2 == 6){
+                    System.out.println("Reproduciendo '86.23'");
+                    System.out.println("En los parlantes: ");
+                    if (EquipoSonido.isParlanteDerecho()==false){
+                        System.out.println("Parlante Derecho : no");
+                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                        System.out.println("Parlante Derecho : si");
+                    } if (EquipoSonido.isParlanteIzq()==false) {
+                        System.out.println("Parlante Izquierdo : no");
+                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                        System.out.println("Parlante Izquierdo : si");
+                    } if (EquipoSonido.isParlanteSubWoofer()==false) {
+                        System.out.println("Parlante Subwoofer : no");
+                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                        System.out.println("Parlante Subwoofer : si");
+                    }
+                } else if (opcion2 == 7){
+                    
+                } else {
+                    System.out.println("Opcion invalida.");
                 }
             //fin de opciones de reproduccion
             //inicio de alarma
@@ -171,7 +208,7 @@ public class Menu {
             //fin de salir
             //inicio de error
             } else {
-                System.out.println("Opcion invalida");
+                System.out.println("Opcion invalida.");
             //fin de error y de codigo
             }
         }
