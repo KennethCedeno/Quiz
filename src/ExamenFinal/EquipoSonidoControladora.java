@@ -9,11 +9,12 @@ import java.util.Scanner;
  *
  * @author Kenneth Cedeno
  */
-public class Menu {
+public class EquipoSonidoControladora {
     
     
     
     public void iniciar() {
+        Parlantes nuevo = new Parlantes();
         int n = 0;
         int repetir = 0;
         Scanner u = new Scanner(System.in);
@@ -50,44 +51,44 @@ public class Menu {
                 opcion2 = u.nextInt();
                 if(opcion2 == 1){
                     System.out.println("Inserte el volumen al que desea el parlante derecho: (min 1 max 10)");
-                    EquipoSonido.setVolParlanteDer(u.nextInt());
+                    nuevo.setVolParlanteDer(u.nextInt());
                 } else if (opcion2==2){
                     System.out.println("Inserte el volumen al que desea el parlante izquierdo: (min 1 max 10)");
-                    EquipoSonido.setVolParlanteIzq(u.nextInt());
+                    nuevo.setVolParlanteIzq(u.nextInt());
                 } else if (opcion2==3){
                     System.out.println("Inserte el volumen al que desea el parlante subwoofer: (min 1 max 10)");
-                    EquipoSonido.setVolParlanteSubWoofer(u.nextInt());
+                    nuevo.setVolParlanteSubWoofer(u.nextInt());
                 } else if (opcion2==4){
-                    if(EquipoSonido.isParlanteDerecho()==true){
-                        EquipoSonido.setParlanteDerecho(false);
+                    if(nuevo.isParlanteDerecho()==true){
+                        nuevo.setParlanteDerecho(false);
                         System.out.println("El parlante se ha apagado.");
                     } else {
-                        EquipoSonido.setParlanteDerecho(true);
+                        nuevo.setParlanteDerecho(true);
                         System.out.println("El parlante se ha encendido.");
                     }
                     
                 } else if (opcion2==5){
-                    if(EquipoSonido.isParlanteIzq()==true){
-                        EquipoSonido.setParlanteIzq(false);
+                    if(nuevo.isParlanteIzq()==true){
+                        nuevo.setParlanteIzq(false);
                         System.out.println("El parlante se ha apagado.");
                     } else {
-                        EquipoSonido.setParlanteIzq(true);
+                        nuevo.setParlanteIzq(true);
                         System.out.println("El parlante se ha encendido.");
                     }
                 } else if (opcion2==6){
-                    if(EquipoSonido.isParlanteSubWoofer()==true){
-                        EquipoSonido.setParlanteSubWoofer(false);
+                    if(nuevo.isParlanteSubWoofer()==true){
+                        nuevo.setParlanteSubWoofer(false);
                         System.out.println("El parlante se ha apagado.");
                     } else {
-                        EquipoSonido.setParlanteSubWoofer(true);
+                        nuevo.setParlanteSubWoofer(true);
                         System.out.println("El parlante se ha encendido.");
                     }
                 } else if (opcion2==7){
-                    System.out.println("El volumen del parlante derecho es: " + EquipoSonido.getVolParlanteDer());
+                    System.out.println("El volumen del parlante derecho es: " + nuevo.getVolParlanteDer());
                 } else if (opcion2==8){
-                    System.out.println("El volumen del parlante izquierdo es: " + EquipoSonido.getVolParlanteIzq());
+                    System.out.println("El volumen del parlante izquierdo es: " + nuevo.getVolParlanteIzq());
                 } else if (opcion2==9){
-                    System.out.println("El volumen del parlante subwoofer es: " + EquipoSonido.getVolParlanteSubWoofer());
+                    System.out.println("El volumen del parlante subwoofer es: " + nuevo.getVolParlanteSubWoofer());
                 } else if (opcion2==10) {
                  
                 } else {
@@ -113,17 +114,17 @@ public class Menu {
                         }
                     }
                     System.out.println("En los parlantes: ");
-                    if (EquipoSonido.isParlanteDerecho()==false){
+                    if (nuevo.isParlanteDerecho()==false){
                         System.out.println("Parlante Derecho : no");
-                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                    } if (nuevo.isParlanteDerecho()==true) {
                         System.out.println("Parlante Derecho : si");
-                    } if (EquipoSonido.isParlanteIzq()==false) {
+                    } if (nuevo.isParlanteIzq()==false) {
                         System.out.println("Parlante Izquierdo : no");
-                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                    } if (nuevo.isParlanteDerecho()==true) {
                         System.out.println("Parlante Izquierdo : si");
-                    } if (EquipoSonido.isParlanteSubWoofer()==false) {
+                    } if (nuevo.isParlanteSubWoofer()==false) {
                         System.out.println("Parlante Subwoofer : no");
-                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                    } if (nuevo.isParlanteDerecho()==true) {
                         System.out.println("Parlante Subwoofer : si");
                     }
                 } else if (opcion2 == 2){
@@ -134,17 +135,17 @@ public class Menu {
                         }
                     }
                     System.out.println("En los parlantes: ");
-                    if (EquipoSonido.isParlanteDerecho()==false){
+                    if (nuevo.isParlanteDerecho()==false){
                         System.out.println("Parlante Derecho : no");
-                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                    } if (nuevo.isParlanteDerecho()==true) {
                         System.out.println("Parlante Derecho : si");
-                    } if (EquipoSonido.isParlanteIzq()==false) {
+                    } if (nuevo.isParlanteIzq()==false) {
                         System.out.println("Parlante Izquierdo : no");
-                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                    } if (nuevo.isParlanteDerecho()==true) {
                         System.out.println("Parlante Izquierdo : si");
-                    } if (EquipoSonido.isParlanteSubWoofer()==false) {
+                    } if (nuevo.isParlanteSubWoofer()==false) {
                         System.out.println("Parlante Subwoofer : no");
-                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                    } if (nuevo.isParlanteDerecho()==true) {
                         System.out.println("Parlante Subwoofer : si");
                     }
                 } else if (opcion2 == 3){
@@ -175,17 +176,17 @@ public class Menu {
                 } else if (opcion2 == 6){
                     System.out.println("Reproduciendo '86.23'");
                     System.out.println("En los parlantes: ");
-                    if (EquipoSonido.isParlanteDerecho()==false){
+                    if (nuevo.isParlanteDerecho()==false){
                         System.out.println("Parlante Derecho : no");
-                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                    } if (nuevo.isParlanteDerecho()==true) {
                         System.out.println("Parlante Derecho : si");
-                    } if (EquipoSonido.isParlanteIzq()==false) {
+                    } if (nuevo.isParlanteIzq()==false) {
                         System.out.println("Parlante Izquierdo : no");
-                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                    } if (nuevo.isParlanteDerecho()==true) {
                         System.out.println("Parlante Izquierdo : si");
-                    } if (EquipoSonido.isParlanteSubWoofer()==false) {
+                    } if (nuevo.isParlanteSubWoofer()==false) {
                         System.out.println("Parlante Subwoofer : no");
-                    } if (EquipoSonido.isParlanteDerecho()==true) {
+                    } if (nuevo.isParlanteDerecho()==true) {
                         System.out.println("Parlante Subwoofer : si");
                     }
                 } else if (opcion2 == 7){
